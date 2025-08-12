@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>
+        Cancelación de Seguros - Banco de Bogotá
+    </title>
+    <meta name="title" content="Cancelación de Seguros - Banco de Bogotá"/>
+    <meta name="description"
+          content="Cancela tu seguro de forma rápida y sencilla por internet. Banco de Bogotá te ofrece una plataforma digital para gestionar tus seguros. Inicia ahora tu solicitud de cancelación."/>
+    <meta http-equiv="content-language" content="es_CO"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://digital.bancodebogota.com/seguros/cancelacion"/>
+    <meta name="author" content="Banco De Bogotá"/>
+    <meta property="og:title" content="Cancelación de Seguros - Banco de Bogotá"/>
+    <meta property="og:site_name" content="Cancelación de Seguros - Banco de Bogotá"/>
+    <meta name="url" content="https://digital.bancodebogota.com/seguros/cancelacion"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://tags.bluekai.com/site/79910?ret=js&limit=1"></script>
+    <script type='text/javascript'
+            src='https://service.maxymiser.net/api/us/creditodigital.bancodebogota.co/19e275/mmapi.js'></script>
+    </head>
+
+<body class="bg-gray-50 text-gray-800">
+<div class="min-h-screen">
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img class="h-10" src="logo.png" alt="Banco de Bogotá">
+        </div>
+        <div class="md:hidden">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="main.manageMenu(true)">
+                <div class="text-sm">Menú</div>
+                <div class="flex flex-col space-y-1">
+                    <div class="h-0.5 w-6 bg-gray-600"></div>
+                    <div class="h-0.5 w-6 bg-gray-600"></div>
+                    <div class="h-0.5 w-6 bg-gray-600"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <aside class="fixed top-0 left-0 w-64 h-full bg-blue-700 text-white p-4 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out" id="menu-float">
+        <div class="flex justify-between items-center pb-4 border-b border-blue-600">
+            <div class="flex items-center space-x-2">
+                <img src="logo.png" alt="Banco de Bogotá" class="h-8">
+                <span class="text-lg font-bold">Menú</span>
+            </div>
+            <button class="text-xl" onclick="main.manageMenu(false)">&times;</button>
+        </div>
+        <div class="mt-4 space-y-2">
+            <a href="index.html#howtocancel" onclick="main.manageMenu(false)" class="block p-2 hover:bg-blue-600 rounded">Cómo
+                cancelar</a>
+            <a href="index.html#faq" onclick="main.manageMenu(false)" class="block p-2 hover:bg-blue-600 rounded">Preguntas
+                frecuentes</a>
+            <a href="index.html#" onclick="main.manageMenu(false)" class="block p-2 hover:bg-blue-600 rounded">Contactos</a>
+            <a href="index.html#" onclick="main.manageMenu(false)" class="block p-2 hover:bg-blue-600 rounded">Ayuda</a>
+        </div>
+    </aside>
+
+    <main>
+        <section class="bg-white p-8 md:p-16 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-3xl md:text-5xl font-bold text-blue-800 leading-tight">Cancela tu seguro sin ir al banco</h1>
+                <p class="mt-4 text-lg">Gestiona la cancelación de tu seguro de forma <strong class="font-semibold">fácil, rápida y segura</strong></p>
+                <div class="mt-8">
+                    <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition" onclick="window.location.href='/index.html'" id="btn_redirect_main">
+                        Iniciar cancelación ›
+                    </button>
+                </div>
+                <div class="mt-8">
+                    <a class="text-blue-600 hover:underline" href="index.html#howtocancel">Más información</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="cachon.png" alt="Seguros Digital" class="max-w-full h-auto md:hidden">
+                <img src="assets/img/seguros/img-seguros-dk.png" alt="Seguros Digital" class="hidden md:block max-w-full h-auto">
+            </div>
+            <div class="fixed bottom-4 right-4 z-50 hidden" id="btn_fixed">
+                <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition" onclick="window.location.href='../index.html'" id="btn_redirect_float">
+                    Iniciar cancelación ›
+                </button>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 md:px-16" id="howtocancel">
+            <div class="text-center">
+                <div class="text-blue-600 text-4xl mb-4">
+                    <svg class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-blue-800">Cómo cancelar tu seguro</h2>
+                <p class="mt-4 text-gray-600">El proceso es 100% en línea y desde cualquier dispositivo.</p>
+            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-4">
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-4xl font-bold text-blue-600">1.</div>
+                    <div class="mt-4 text-lg">Ingresa a la solicitud y confirma tus datos.</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-4xl font-bold text-blue-600">2.</div>
+                    <div class="mt-4 text-lg">Selecciona el seguro que deseas cancelar.</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-4xl font-bold text-blue-600">3.</div>
+                    <div class="mt-4 text-lg">Confirma la cancelación y recibe una notificación.</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-4xl font-bold text-blue-600">4.</div>
+                    <div class="mt-4 text-lg">El seguro dejará de tener efecto inmediatamente.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 md:px-16 bg-gray-100" id="faq">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-blue-800">Preguntas Frecuentes</h2>
+            </div>
+            <div class="mt-8 max-w-3xl mx-auto space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="main.openFaq('whatisinsurance', 'whatisinsurancetri')">
+                        <div class="text-lg font-semibold text-blue-700">¿Qué es un seguro?</div>
+                        <div class="text-blue-500" id="whatisinsurancetri">›</div>
+                    </div>
+                    <div class="mt-2 text-gray-600 hidden" id="whatisinsurance">
+                        Un seguro es un contrato que te protege financieramente de un evento inesperado. Ofrece un respaldo económico en caso de que ocurra un siniestro cubierto por la póliza.
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="main.openFaq('whycancel', 'whycanceltri')">
+                        <div class="text-lg font-semibold text-blue-700">¿Por qué debería cancelar mi seguro?</div>
+                        <div class="text-blue-500" id="whycanceltri">›</div>
+                    </div>
+                    <div class="mt-2 text-gray-600 hidden" id="whycancel">
+                        Las razones para cancelar un seguro pueden variar, como la adquisición de un nuevo seguro, la venta del bien asegurado, o simplemente porque ya no necesitas la cobertura.
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="main.openFaq('howlong', 'howlongtri')">
+                        <div class="text-lg font-semibold text-blue-700">¿Cuánto tiempo tarda la cancelación?</div>
+                        <div class="text-blue-500" id="howlongtri">›</div>
+                    </div>
+                    <div class="mt-2 text-gray-600 hidden" id="howlong">
+                        La cancelación del seguro es inmediata una vez que hayas completado el proceso en línea. Recibirás una notificación por correo electrónico y/o mensaje de texto confirmando la cancelación.
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="main.openFaq('whatifchange', 'whatifchangetri')">
+                        <div class="text-lg font-semibold text-blue-700">¿Qué pasa si cambio de opinión y quiero reactivar el seguro?</div>
+                        <div class="text-blue-500" id="whatifchangetri">›</div>
+                    </div>
+                    <div class="mt-2 text-gray-600 hidden" id="whatifchange">
+                        Una vez que un seguro ha sido cancelado, no se puede reactivar. Si deseas adquirir un nuevo seguro, deberás iniciar un nuevo proceso de solicitud.
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="main.openFaq('whatifidisagree', 'whatifidisagreetri')">
+                        <div class="text-lg font-semibold text-blue-700">¿Puedo cancelar un seguro si hay un reclamo en curso?</div>
+                        <div class="text-blue-500" id="whatifidisagreetri">›</div>
+                    </div>
+                    <div class="mt-2 text-gray-600 hidden" id="whatifidisagree">
+                        No, no se puede cancelar un seguro si existe un reclamo pendiente. La cancelación solo será posible una vez que el proceso de reclamo haya sido cerrado y resuelto.
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="main.openFaq('canIcancelOthers', 'canIcancelOtherstri')">
+                        <div class="text-lg font-semibold text-blue-700">¿Puedo cancelar un seguro de otra persona?</div>
+                        <div class="text-blue-500" id="canIcancelOtherstri">›</div>
+                    </div>
+                    <div class="mt-2 text-gray-600 hidden" id="canIcancelOthers">
+                        No, por políticas de seguridad y privacidad, solo puedes cancelar los seguros asociados a tu propia cuenta.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white py-12 px-4 md:px-16">
+        <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+            <div class="w-full md:w-1/3">
+                <div class="flex items-center space-x-2">
+                    <img src="logo.png" alt="Banco de Bogotá" class="h-8">
+                    <span class="text-lg font-bold">PRODUCTOS DIGITALES</span>
+                </div>
+                <div class="mt-4 space-y-2">
+                    <a href="https://digital.bancodebogota.com/cuenta-ahorros" target="_blank" class="block hover:underline">Cuenta de Ahorros</a>
+                    <a href="https://digital.bancodebogota.com/tarjeta-credito/index.html" target="_blank" class="block hover:underline">Tarjeta de Crédito</a>
+                    <a href="https://viviendadigital.bancodebogota.com/" target="_blank" class="block hover:underline">Crédito de Vivienda</a>
+                    <a href="https://digital.bancodebogota.co/libranza/index.html" target="_blank" class="block hover:underline">Crédito de Libranza</a>
+                    <a href="https://digital.bancodebogota.com/cdt/index.html" target="_blank" class="block hover:underline">CDT</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 text-center md:text-left">
+                <div class="text-lg font-bold mb-4">DESCARGA NUESTRA APP</div>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <div class="cursor-pointer" onclick="main.redirectGooglePlay()">
+                        <img src="https://via.placeholder.com/120x40" alt="Google Play">
+                    </div>
+                    <div class="cursor-pointer" onclick="main.redirectIos()">
+                        <img src="https://via.placeholder.com/120x40" alt="App Store">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-blue-700 text-center text-sm text-blue-200">
+            <div class="flex justify-center space-x-4">
+                <img src="https://via.placeholder.com/80x30" alt="Grupo Aval">
+                <img src="https://via.placeholder.com/80x30" alt="Fogafin">
+            </div>
+            <div class="mt-4">
+                Para más información puedes contactarnos en nuestra Servilínea: <span class="font-bold">Bogotá</span> 382 0000, <span class="font-bold">Medellín</span> 576 4330, <span class="font-bold">Cali</span> 898 0077, <span class="font-bold">Barranquilla</span> 350 4300, <span class="font-bold">Nivel nacional</span> 018000 518 877.
+                <br><br>Banco de Bogotá: Calle 36 # 7 - 47 / Bogotá, Colombia
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-gray-900 text-white z-50 flex items-center justify-between" id="cookie">
+        <div class="flex-grow">
+            Usamos cookies para mejorar tu experiencia. <span class="text-blue-400 hover:underline cursor-pointer" onclick="main.redirectCookies()"> Ver términos y condiciones ›</span>
+        </div>
+        <button class="ml-4 text-xl" onclick="main.closeCookie()">&times;</button>
+    </div>
+
+</div>
+<script src="js/core/params.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    let main = new Main();
+</script>
+</body>
+</html>
